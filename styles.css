@@ -1,0 +1,114 @@
+
+@keyframes colorshift {
+    85%, 5% {background-color: red;}
+    5%, 25% {background-color: yellow;}
+    25%, 45% {background-color: blue;}
+    45%, 65% {background-color: green;}
+    65%, 85% {background-color: pink;}
+}
+
+.back {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    animation-name: colorshift;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.backwards{
+    width: 95vw;
+    height: 90vh;
+    position: absolute;
+    margin-top: 5vh;
+    animation-name: colorshift;
+    animation-duration: 15s;
+    animation-direction: reverse ;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+
+@keyframes fly {
+	98.001%, 0% {; transform: translateX(-200%) translateY(100vh) }
+	15% { transform: translateX(100vw) translateY(-100%) rotateZ(180deg) }
+	15.001%, 18% { transform: translateX(100vw) translateY(-30%) }
+	40% { transform: translateX(-200%) translateY(3vh) rotateZ(-180deg) }
+	40.001%, 43% { transform: translateX(-200%) translateY(-100%) rotateZ(-180deg) }
+	65% { transform: translateX(100vw) translateY(50vh) }
+	65.001%, 68% { transform: translateX(20vw) translateY(-200%) rotateZ(180deg) }
+	95% { transform: translateX(10vw) translateY(100vh) }
+}  
+
+.flier {
+    pointer-events: none;
+    width: 10vw;
+    height: 10vh;   
+    color: hotpink;
+    text-
+}
+
+.flier > * {
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%);
+	position: fixed;
+	animation-delay: .01s;
+	z-index: 3;
+}
+
+.flier2 {
+    pointer-events: none;
+    width: 10vw;
+    height: 10vh;    
+    color: lightblue;
+}
+
+.flier2 > * {
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%);
+	position: fixed;
+    animation-delay: 5s;
+    animation-direction: reverse;
+	z-index: 3;
+}
+
+.item{
+    width: 10vw;
+    height: 20vh;    
+    border-radius: 100%;
+    background-color: blueviolet;
+    transition-property: background-color;
+    Transition-duration:3s;
+    Transition-timing-function:ease-out; 
+    Transition-delay:0s
+}    
+
+.item:hover{
+    background-color:yellow;
+}
+
+.flier3 {
+    pointer-events: visible;
+
+}
+
+.flier3> * {
+    display: flex;
+    animation: fly 50s linear infinite;
+    pointer-events: visible !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%);
+	position: absolute;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    z-index: 3;
+    background-color: blueviolet;
+}
